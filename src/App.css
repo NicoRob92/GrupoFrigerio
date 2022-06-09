@@ -5,11 +5,17 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background: #FDFDFD;
 }
 
+.spacer{
+  height:20vh;
+  transition:.5s ease-in-out;
+  scroll-behavior: smooth !important;
+}
 .imgContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content:  space-evenly;
   width: 100vw;
   height: 80vh;
 }

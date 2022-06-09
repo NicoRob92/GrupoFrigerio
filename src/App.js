@@ -1,30 +1,23 @@
 import './App.css';
-import img from './GrupoFrigerio.png';
 import img2 from './GrupoFirgerioText.png.png';
 import elbosque from './elBosque.png';
-import { MapContainer, TileLayer , Marker, Popup} from 'react-leaflet';
+import img from './GrupoFrigerio.png';
 
+import { MapContainer, TileLayer , Marker, Popup} from 'react-leaflet';
+import Navbar from './components/Navbar.jsx'
 function App() {
-//   var myIcon = icon({
-//     iconUrl: elbosque,
-//     iconSize: [38, 95],
-//     iconAnchor: [22, 94],
-//     popupAnchor: [-3, -76],
-//     shadowUrl: 'my-icon-shadow.png',
-//     shadowSize: [68, 95],
-//     shadowAnchor: [22, 94]
-// });
+
   return (
     <div className='App'>
-      <img className='logo' src={img} alt='Grupo' />
-      <div className='imgContainer'>
+      <Navbar/>
+      <div className='spacer' id='home'></div>
+      <div className='imgContainer' >
         <div className='img'>
           <div className='filtro'>
             <h1 className='NamePlace'>GRUPO FRIGERIO</h1>
             <img className='title' src={img} alt='logo' />
             <div className='buttons'>
               <a href='http://'>Website</a>
-              <a href='http://'>Reservas</a>
             </div>
           </div>
         </div>
@@ -33,13 +26,13 @@ function App() {
             <h1 className='NamePlace'>HOSTERIA EL BOSQUE</h1>
             <img className='title' src={elbosque} alt='logo' />
             <div className='buttons'>
-              <a href='http://'>Website</a>
-              <a href='http://'>Reservas</a>
+              <a href='http://hosteria-delbosque.com.ar/'>Website</a>
             </div>
           </div>
         </div>
       </div>
-      <div className='History'>
+      <div className='spacer' id='aboutUs'></div>
+      <div className='History' >
         <img className='logoText' src={img2} alt='gru' />
         <h1> Nuestra Historia </h1>
         <p>
@@ -55,7 +48,7 @@ function App() {
           estándares sociales de la región. Con visión a una expansión global.
         </p>
       </div>
-      <div className='mapa'>
+      <div className='mapa' id='contactUs'>
         <MapContainer
           center={[51.505, -0.09]}
           zoom={13}
